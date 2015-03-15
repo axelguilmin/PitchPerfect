@@ -10,11 +10,23 @@ import UIKit
 
 class PPViewController: UIViewController {
     
-    @IBOutlet var _recording: UILabel!
+    @IBOutlet weak var _recordingLabel: UILabel!
+    @IBOutlet weak var _stopButton: UIButton!
+    @IBOutlet weak var _recordButton: UIButton!
+    
+    // MARK: - LAYOUT
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        _recordButton.enabled = true;
+        _recordingLabel.hidden = true;
+        _stopButton.hidden = true;
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,11 +39,15 @@ class PPViewController: UIViewController {
     @IBAction func recordAudio() {
         // TODO: Record audio
         
-        _recording.hidden = false;
+        _recordButton.enabled = false;
+        _recordingLabel.hidden = false;
+        _stopButton.hidden = false;
     }
     
-    @IBAction private func stopRecordingAudio() {
-        _recording.hidden = true;
+    @IBAction func stopRecordingAudio() {
+        _recordButton.enabled = true;
+        _recordingLabel.hidden = true;
+        _stopButton.hidden = true;
     }
 }
 

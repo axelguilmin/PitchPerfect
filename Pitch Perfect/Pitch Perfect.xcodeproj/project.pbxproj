@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77A34D691AB5B4F400174322 /* PPPlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A34D651AB5B4F400174322 /* PPPlaySoundsViewController.swift */; };
+		77A34D6A1AB5B4F400174322 /* PPRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A34D661AB5B4F400174322 /* PPRecordViewController.swift */; };
 		77EE5D6B1AAE509A00B09F17 /* PPAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EE5D6A1AAE509A00B09F17 /* PPAppDelegate.swift */; };
-		77EE5D6D1AAE509A00B09F17 /* PPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EE5D6C1AAE509A00B09F17 /* PPViewController.swift */; };
 		77EE5D701AAE509A00B09F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EE5D6E1AAE509A00B09F17 /* Main.storyboard */; };
 		77EE5D721AAE509A00B09F17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EE5D711AAE509A00B09F17 /* Images.xcassets */; };
 		77EE5D751AAE509A00B09F17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EE5D731AAE509A00B09F17 /* LaunchScreen.xib */; };
@@ -26,10 +27,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77A34D651AB5B4F400174322 /* PPPlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPPlaySoundsViewController.swift; sourceTree = "<group>"; };
+		77A34D661AB5B4F400174322 /* PPRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPRecordViewController.swift; sourceTree = "<group>"; };
 		77EE5D651AAE509A00B09F17 /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EE5D691AAE509A00B09F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77EE5D6A1AAE509A00B09F17 /* PPAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPAppDelegate.swift; sourceTree = "<group>"; };
-		77EE5D6C1AAE509A00B09F17 /* PPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPViewController.swift; sourceTree = "<group>"; };
 		77EE5D6F1AAE509A00B09F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77EE5D711AAE509A00B09F17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		77EE5D741AAE509A00B09F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -56,6 +58,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77A34D641AB5B4F400174322 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77A34D651AB5B4F400174322 /* PPPlaySoundsViewController.swift */,
+				77A34D661AB5B4F400174322 /* PPRecordViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77A34D671AB5B4F400174322 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77A34D681AB5B4F400174322 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		77EE5D5C1AAE509A00B09F17 = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +102,10 @@
 		77EE5D671AAE509A00B09F17 /* Pitch Perfect */ = {
 			isa = PBXGroup;
 			children = (
+				77A34D671AB5B4F400174322 /* Model */,
+				77A34D641AB5B4F400174322 /* Controller */,
+				77A34D681AB5B4F400174322 /* View */,
 				77EE5D6A1AAE509A00B09F17 /* PPAppDelegate.swift */,
-				77EE5D6C1AAE509A00B09F17 /* PPViewController.swift */,
 				77EE5D6E1AAE509A00B09F17 /* Main.storyboard */,
 				77EE5D711AAE509A00B09F17 /* Images.xcassets */,
 				77EE5D731AAE509A00B09F17 /* LaunchScreen.xib */,
@@ -211,7 +238,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77EE5D6D1AAE509A00B09F17 /* PPViewController.swift in Sources */,
+				77A34D691AB5B4F400174322 /* PPPlaySoundsViewController.swift in Sources */,
+				77A34D6A1AB5B4F400174322 /* PPRecordViewController.swift in Sources */,
 				77EE5D6B1AAE509A00B09F17 /* PPAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

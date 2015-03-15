@@ -1,5 +1,5 @@
 //
-//  PPViewController.swift
+//  PPRecordViewController.swift
 //  Pitch Perfect
 //
 //  Created by Axel Guilmin on 3/10/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PPViewController: UIViewController {
+class PPRecordViewController: UIViewController {
     
     @IBOutlet weak var _recordingLabel: UILabel!
     @IBOutlet weak var _stopButton: UIButton!
@@ -28,7 +28,7 @@ class PPViewController: UIViewController {
         _recordingLabel.hidden = true;
         _stopButton.hidden = true;
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

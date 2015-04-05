@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77161BA91AC0DD78004903C7 /* PPRecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77161BA81AC0DD77004903C7 /* PPRecordedAudio.swift */; };
 		77A34D691AB5B4F400174322 /* PPPlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A34D651AB5B4F400174322 /* PPPlaySoundsViewController.swift */; };
-		77A34D6A1AB5B4F400174322 /* PPRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A34D661AB5B4F400174322 /* PPRecordViewController.swift */; };
+		77A34D6A1AB5B4F400174322 /* PPRecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A34D661AB5B4F400174322 /* PPRecordSoundsViewController.swift */; };
 		77A34D6C1AB5BBCD00174322 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A34D6B1AB5BBCD00174322 /* Info.plist */; };
-		77A34D6E1AB5F3D300174322 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77A34D6D1AB5F3D300174322 /* movie_quote.mp3 */; };
 		77EE5D6B1AAE509A00B09F17 /* PPAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EE5D6A1AAE509A00B09F17 /* PPAppDelegate.swift */; };
 		77EE5D701AAE509A00B09F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EE5D6E1AAE509A00B09F17 /* Main.storyboard */; };
 		77EE5D721AAE509A00B09F17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EE5D711AAE509A00B09F17 /* Images.xcassets */; };
@@ -29,10 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77161BA81AC0DD77004903C7 /* PPRecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPRecordedAudio.swift; sourceTree = "<group>"; };
 		77A34D651AB5B4F400174322 /* PPPlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPPlaySoundsViewController.swift; sourceTree = "<group>"; };
-		77A34D661AB5B4F400174322 /* PPRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPRecordViewController.swift; sourceTree = "<group>"; };
+		77A34D661AB5B4F400174322 /* PPRecordSoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPRecordSoundsViewController.swift; sourceTree = "<group>"; };
 		77A34D6B1AB5BBCD00174322 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77A34D6D1AB5F3D300174322 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 		77EE5D651AAE509A00B09F17 /* Pitch Perfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EE5D6A1AAE509A00B09F17 /* PPAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPAppDelegate.swift; sourceTree = "<group>"; };
 		77EE5D6F1AAE509A00B09F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				77A34D651AB5B4F400174322 /* PPPlaySoundsViewController.swift */,
-				77A34D661AB5B4F400174322 /* PPRecordViewController.swift */,
+				77A34D661AB5B4F400174322 /* PPRecordSoundsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -73,6 +73,7 @@
 		77A34D671AB5B4F400174322 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				77161BA81AC0DD77004903C7 /* PPRecordedAudio.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,14 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				77A34D671AB5B4F400174322 /* Model */,
-				77A34D641AB5B4F400174322 /* Controller */,
 				77A34D681AB5B4F400174322 /* View */,
+				77A34D641AB5B4F400174322 /* Controller */,
 				77EE5D6A1AAE509A00B09F17 /* PPAppDelegate.swift */,
 				77A34D6B1AB5BBCD00174322 /* Info.plist */,
 				77EE5D6E1AAE509A00B09F17 /* Main.storyboard */,
 				77EE5D711AAE509A00B09F17 /* Images.xcassets */,
 				77EE5D731AAE509A00B09F17 /* LaunchScreen.xib */,
-				77A34D6D1AB5F3D300174322 /* movie_quote.mp3 */,
 			);
 			path = "Pitch Perfect";
 			sourceTree = "<group>";
@@ -216,7 +216,6 @@
 			files = (
 				77A34D6C1AB5BBCD00174322 /* Info.plist in Resources */,
 				77EE5D701AAE509A00B09F17 /* Main.storyboard in Resources */,
-				77A34D6E1AB5F3D300174322 /* movie_quote.mp3 in Resources */,
 				77EE5D751AAE509A00B09F17 /* LaunchScreen.xib in Resources */,
 				77EE5D721AAE509A00B09F17 /* Images.xcassets in Resources */,
 			);
@@ -236,8 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77161BA91AC0DD78004903C7 /* PPRecordedAudio.swift in Sources */,
 				77A34D691AB5B4F400174322 /* PPPlaySoundsViewController.swift in Sources */,
-				77A34D6A1AB5B4F400174322 /* PPRecordViewController.swift in Sources */,
+				77A34D6A1AB5B4F400174322 /* PPRecordSoundsViewController.swift in Sources */,
 				77EE5D6B1AAE509A00B09F17 /* PPAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

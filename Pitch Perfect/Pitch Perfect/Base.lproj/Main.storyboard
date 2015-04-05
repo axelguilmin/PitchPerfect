@@ -7,7 +7,7 @@
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="PPRecordViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="PPRecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -38,13 +38,12 @@
                                 </state>
                                 <connections>
                                     <action selector="stopRecordingAudio" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wgu-e5-ubh"/>
-                                    <segue destination="VxL-P9-bKT" kind="show" id="MTV-gG-nl0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5ch-We-e5j" firstAttribute="top" secondItem="DF8-74-K2h" secondAttribute="bottom" constant="60" id="7BA-ZL-ezU"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5ch-We-e5j" secondAttribute="bottom" constant="50" id="AoE-B8-sxq"/>
                             <constraint firstAttribute="centerX" secondItem="5KL-yX-D5o" secondAttribute="centerX" id="BX1-UZ-Sns"/>
                             <constraint firstAttribute="centerY" secondItem="5KL-yX-D5o" secondAttribute="centerY" id="GcD-qa-ZAx"/>
                             <constraint firstItem="DF8-74-K2h" firstAttribute="top" secondItem="5KL-yX-D5o" secondAttribute="bottom" constant="8" id="Q32-0U-MBH"/>
@@ -58,11 +57,11 @@
                                 <exclude reference="5ch-We-e5j"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="AoE-B8-sxq"/>
                                 <exclude reference="Q32-0U-MBH"/>
                                 <exclude reference="edJ-aT-qBZ"/>
                                 <exclude reference="BX1-UZ-Sns"/>
                                 <exclude reference="GcD-qa-ZAx"/>
-                                <exclude reference="7BA-ZL-ezU"/>
                                 <exclude reference="bJG-nJ-gdQ"/>
                             </mask>
                         </variation>
@@ -73,11 +72,11 @@
                                 <include reference="5ch-We-e5j"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="AoE-B8-sxq"/>
                                 <include reference="Q32-0U-MBH"/>
                                 <include reference="edJ-aT-qBZ"/>
                                 <include reference="BX1-UZ-Sns"/>
                                 <include reference="GcD-qa-ZAx"/>
-                                <include reference="7BA-ZL-ezU"/>
                                 <include reference="bJG-nJ-gdQ"/>
                             </mask>
                         </variation>
@@ -87,6 +86,7 @@
                         <outlet property="_recordButton" destination="5KL-yX-D5o" id="2Rx-S1-2b6"/>
                         <outlet property="_recordingLabel" destination="DF8-74-K2h" id="UD6-VZ-dkK"/>
                         <outlet property="_stopButton" destination="5ch-We-e5j" id="JFb-iI-Ahg"/>
+                        <segue destination="VxL-P9-bKT" kind="show" identifier="stopRecording" id="d0k-hi-aiM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -123,6 +123,15 @@
                                     <action selector="stop" destination="VxL-P9-bKT" eventType="touchUpInside" id="j9V-s6-keN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2o-Fk-Kpd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Chipmunk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChipmunk" destination="VxL-P9-bKT" eventType="touchUpInside" id="6Vm-Hg-Nj8"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hs-A1-KMs">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="Slow">
@@ -132,27 +141,46 @@
                                     <action selector="playSlow" destination="VxL-P9-bKT" eventType="touchUpInside" id="7M8-Yi-GV3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZh-YC-4Wc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Darthvader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playDarthvader" destination="VxL-P9-bKT" eventType="touchUpInside" id="O14-08-Kq4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bZh-YC-4Wc" firstAttribute="top" secondItem="T8h-BO-DlH" secondAttribute="bottom" constant="50" id="ETF-L5-ghU"/>
                             <constraint firstAttribute="centerX" secondItem="fL1-yB-NBD" secondAttribute="centerX" id="EkG-OR-Cq6"/>
-                            <constraint firstItem="T8h-BO-DlH" firstAttribute="top" secondItem="T8E-gt-aIT" secondAttribute="bottom" constant="46" id="Ijk-lX-FeK"/>
+                            <constraint firstItem="T8h-BO-DlH" firstAttribute="top" secondItem="T8E-gt-aIT" secondAttribute="bottom" constant="50" id="Ijk-lX-FeK"/>
+                            <constraint firstAttribute="centerX" secondItem="bZh-YC-4Wc" secondAttribute="centerX" constant="-80" id="PVE-0Z-0MM"/>
                             <constraint firstAttribute="centerX" secondItem="T8h-BO-DlH" secondAttribute="centerX" constant="-80" id="cuJ-q6-2dd"/>
                             <constraint firstAttribute="centerX" secondItem="7hs-A1-KMs" secondAttribute="centerX" constant="80" id="mhG-Z9-Y9r"/>
-                            <constraint firstItem="7hs-A1-KMs" firstAttribute="top" secondItem="T8E-gt-aIT" secondAttribute="bottom" constant="46" id="qnw-Gw-Oq2"/>
-                            <constraint firstItem="TeJ-uu-dIx" firstAttribute="top" secondItem="fL1-yB-NBD" secondAttribute="bottom" constant="150" id="uAH-jB-EBF"/>
+                            <constraint firstItem="f2o-Fk-Kpd" firstAttribute="centerX" secondItem="7hs-A1-KMs" secondAttribute="centerX" id="msj-m8-sMG"/>
+                            <constraint firstItem="7hs-A1-KMs" firstAttribute="top" secondItem="T8E-gt-aIT" secondAttribute="bottom" constant="50" id="qnw-Gw-Oq2"/>
+                            <constraint firstItem="f2o-Fk-Kpd" firstAttribute="top" secondItem="7hs-A1-KMs" secondAttribute="bottom" constant="50" id="rur-6g-Snv"/>
+                            <constraint firstItem="TeJ-uu-dIx" firstAttribute="top" secondItem="fL1-yB-NBD" secondAttribute="bottom" constant="50" id="uAH-jB-EBF"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="T8h-BO-DlH"/>
                                 <exclude reference="fL1-yB-NBD"/>
+                                <exclude reference="f2o-Fk-Kpd"/>
                                 <exclude reference="7hs-A1-KMs"/>
+                                <exclude reference="bZh-YC-4Wc"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="mhG-Z9-Y9r"/>
                                 <exclude reference="qnw-Gw-Oq2"/>
                                 <exclude reference="Ijk-lX-FeK"/>
                                 <exclude reference="cuJ-q6-2dd"/>
+                                <exclude reference="msj-m8-sMG"/>
+                                <exclude reference="rur-6g-Snv"/>
+                                <exclude reference="ETF-L5-ghU"/>
+                                <exclude reference="PVE-0Z-0MM"/>
                                 <exclude reference="EkG-OR-Cq6"/>
                                 <exclude reference="uAH-jB-EBF"/>
                             </mask>
@@ -161,13 +189,19 @@
                             <mask key="subviews">
                                 <include reference="T8h-BO-DlH"/>
                                 <include reference="fL1-yB-NBD"/>
+                                <include reference="f2o-Fk-Kpd"/>
                                 <include reference="7hs-A1-KMs"/>
+                                <include reference="bZh-YC-4Wc"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="mhG-Z9-Y9r"/>
                                 <include reference="qnw-Gw-Oq2"/>
                                 <include reference="Ijk-lX-FeK"/>
                                 <include reference="cuJ-q6-2dd"/>
+                                <include reference="msj-m8-sMG"/>
+                                <include reference="rur-6g-Snv"/>
+                                <include reference="ETF-L5-ghU"/>
+                                <include reference="PVE-0Z-0MM"/>
                                 <include reference="EkG-OR-Cq6"/>
                                 <include reference="uAH-jB-EBF"/>
                             </mask>
@@ -176,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYy-8j-pWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3034.5" y="46"/>
+            <point key="canvasLocation" x="3223.5" y="46"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b7O-8D-Y9o">
@@ -198,6 +232,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Chipmunk" width="100" height="100"/>
+        <image name="Darthvader" width="100" height="100"/>
         <image name="Fast" width="100" height="100"/>
         <image name="Microphone" width="100" height="100"/>
         <image name="Slow" width="100" height="100"/>

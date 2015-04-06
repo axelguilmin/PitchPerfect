@@ -45,7 +45,10 @@ class PPPlaySoundsViewController: UIViewController {
         _audioEngine.connect(_audioReverb, to: _audioDelay, format: nil)
         _audioEngine.connect(_audioDelay, to: _audioEngine.outputNode, format: nil)
         
-        _audioEngine.startAndReturnError(nil)
+        var error:NSError?
+        if _audioEngine.startAndReturnError(&error) {
+            println("An error occured when starting the audio enfine : \(error)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
